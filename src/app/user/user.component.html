@@ -1,0 +1,42 @@
+
+
+
+<div class="container-fluid">
+
+    <form #userForm="ngForm" > 
+        
+<div class="from-group">
+    <label>First name</label>
+    <input type="text"
+    required #fname="ngModel"
+   [class.is-invalid]="fname.invalid && fname.touched"
+   class="form-control" name="fname1" [(ngModel)]="userModel.fname">
+  {{ fname.className }}
+  </div>
+
+          
+<div class="from-group">
+    <label>Last Name</label>
+    <input type="text"
+    required #lname="ngModel"
+   [class.is-invalid]="lname.invalid && lname.touched"
+   class="form-control" name="lname1" [(ngModel)]="userModel.lname">
+  {{ lname.className }}
+  </div>
+
+          
+<div class="from-group">
+    <label>Position</label>
+    <input type="text"
+    required #position="ngModel"
+   [class.is-invalid]="position.invalid && position.touched"
+   class="form-control" name="position1" [(ngModel)]="userModel.position">
+  {{ position.className }}
+  </div>
+  <hr>
+
+          <button  class="btn btn-primary" (click)="onSave()" >Submit</button>
+    </form>
+
+
+</div>
